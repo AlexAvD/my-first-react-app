@@ -1,17 +1,17 @@
 # My first react app
 
-В рамках изучения таких технологий как "Meteor" и "React", мною было разработано простое приложение "Todo list".
+В рамках изучения таких технологий как "Meteor" и "React", мною было разработано приложение "Todo list".
 
 **Окончательный результат:**
 
-![](./screenshots/1.png);
+![](./screenshots/1.png)
 
 ___
 
-![](./screenshots/2.png);
+![](./screenshots/2.png)
 
 ___
 
-![](./screenshots/3.png);
+![](./screenshots/3.png)
 
 ___
