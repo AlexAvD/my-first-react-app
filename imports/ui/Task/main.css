@@ -1,0 +1,132 @@
+.task {
+  color: #fff;
+  width: 100%;
+  overflow: hidden;
+  display: inline-block;
+  margin: 0px 0 30px 0;
+  box-shadow: 
+    0 2px 2px rgba(0, 0, 0, 0.25),
+    0 4px 4px rgba(0, 0, 0, 0.25),
+    0 8px 8px rgba(0, 0, 0, 0.25),
+    0 14px 14px rgba(0, 0, 0, 0.25);
+  transition: 
+    opacity 0.3s, 
+    box-shadow 0.4s,
+    transform 0.6s ease-in;
+}
+
+.task--deleted {
+  transform: scale(0);
+  opacity: 0;
+}
+
+/* .task:not(:last-child) {
+  margin-bottom: 20px;
+} */
+
+.task--complete {
+  color: #b5b0b0;
+  box-shadow: 
+    0 2px 2px rgba(0, 0, 0, 0.25),
+    0 4px 4px rgba(0, 0, 0, 0.25),
+    0 8px 8px rgba(0, 0, 0, 0.25);
+}
+
+.task--complete .task__header {
+  background: #009468; 
+}
+
+.task.task--complete .task-body__text {
+  text-decoration: line-through;
+  color: #b5b0b0;
+}
+
+.task__header {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  padding: 5px;
+  align-items: center;
+  background-color: #00ce90;
+  transition: background-color 0.2s;
+}
+
+.task-header__btn {
+  font-size: 1.25em;
+  line-height: 0;
+  padding: 5px;
+  -webkit-filter: drop-shadow( 0 2px 2px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow( 0 2px 2px rgba(0, 0, 0, 0.25));
+}
+
+.task-header__controls-inner {
+  justify-self: start;
+  align-items: center;
+  display: flex;
+}
+
+.task-header-controls__divider {
+  display: block;
+  height: 0.9em;
+  width: 1px;
+  margin: 0 2px;
+  background-color: rgba(255, 255, 255, 0.5); 
+}
+
+.task-header-controls__check-btn {
+  position: relative;
+}
+
+.task-header-controls__check-btn--checked >
+.task-header-controls__check-btn-mark {
+  opacity: 1;
+}
+
+.task-header-controls__check-btn-mark {
+  opacity: 0;
+  position: absolute;
+  font-size: 0.9em;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.2s;
+}
+
+.task-header__delete-btn {
+  justify-self: end;
+} 
+
+.task-header__username-and-time-inner {
+  text-align: center;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+  font-size: 0.9em;
+  font-weight: 300;
+}
+
+
+.task-header__username {
+  text-transform: capitalize;
+}
+
+.task-header__username,
+.task-header__time {
+  font-weight: 600;
+  margin: 0 0.3em;
+}
+
+.task__body {
+  padding: 1em;
+  background: #000;
+  word-break: break-word;
+}
+
+.task-body__text {
+  transition: color 0.2s;
+}
+
+@media (max-width: 720px) {
+  .task {
+    font-size: 0.8em;
+    margin-bottom: 20px;
+  }
+
+}

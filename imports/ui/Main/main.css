@@ -1,0 +1,21 @@
+.main {
+  margin-top: 75px; 
+  height: 100%;
+}
+
+.main__inner {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 720px) {
+  .main {
+    margin-top: 113px;
+    
+  }
+}
+
+/* .main__inner {
+  display: grid;
+  grid-template-columns: 30% 70%;
+} */

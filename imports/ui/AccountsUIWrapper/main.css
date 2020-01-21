@@ -1,0 +1,112 @@
+.accounts-dialog {
+  border: none;
+  border-radius: 0;
+  box-shadow: 
+    0 2px 2px rgba(0, 0, 0, 0.1),
+    0 4px 4px rgba(0, 0, 0, 0.1),
+    0 8px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.accounts-dialog * {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.additional-link-container {
+  text-align: center;
+}
+
+#login-dropdown-list {
+  padding: 15px;
+}
+
+#login-buttons .login-close-text {
+  color: #c3c3c3;
+  transition: 0.2s;
+}
+
+#login-buttons .login-close-text:hover {
+  color: #000;
+}
+
+.accounts-dialog label {
+  display: inline;
+  font-size: 0.9em;
+}
+
+#login-password-label-and-input {
+  margin: 10px 0;
+}
+
+#login-buttons input[type=password], 
+#login-buttons input[type=text] {
+  border: 0;
+  border-radius: 0;
+  background:
+    linear-gradient(0deg, #00ce90 2px, transparent 1px), 
+    linear-gradient(0deg, black 1px, transparent 1px);
+
+  background-size: 0% 100%, 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background 0.4s;
+}
+
+#login-buttons input[type=password]:focus, 
+#login-buttons input[type=text]:focus {
+  outline: none;
+  background-size: 100% 100%, 100% 100%;
+}
+
+#login-buttons a {
+  text-decoration: none;
+}
+
+#login-dropdown-list {
+  transform: translate(-68%, -3px);
+}
+
+#login-buttons .login-close-text {
+  float: right;
+}
+
+#login-buttons .login-button {
+  margin: 20px auto 2px auto;
+  display: block;
+  padding: 0.5em 2em;
+  font-size: 1em;
+  border: none;
+  background: #000;
+  transition: background 0.2s;;
+}
+
+#login-buttons .login-button:hover, 
+.accounts-dialog .login-button:hover {
+  background: #00ce90;
+}
+
+#login-buttons .login-button:focus, 
+.accounts-dialog .login-button:focus {
+  outline: none;
+}
+
+#login-buttons #back-to-login-link,
+#login-buttons #signup-link {
+  margin: 0 auto;
+  float: none;
+  color: #00ce90;
+  text-decoration: underline;
+}
+
+#login-buttons #login-buttons-logout {
+  margin: 10px 0 20px 0;
+}
+
+#login-buttons #login-buttons-open-change-password {
+  margin-top: 10px;
+}
+
+#login-name-link {
+  font-size: 1.3em;
+  font-weight: 100;
+}

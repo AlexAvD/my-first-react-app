@@ -1,0 +1,142 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background-color: #000;
+    color: #fff;
+    box-shadow: 
+        0 2px 2px rgba(0, 0, 0, 0.25),
+        0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.header__inner {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 75px;
+    grid-gap: 30px;
+    align-items: center;
+    padding: 0 15px;
+    grid-template-areas: 
+        "logo task-form login-btn";
+}
+
+.header__logo {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 2.25em;
+    position: relative;
+    padding: 0 5px;
+}
+
+.header__logo-box {
+    grid-area: logo;
+}
+
+
+.header__logo:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 0.111111em;
+    width: 100%;
+    background-color: #00ce90;
+    top: 0.65em;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.header__task-form-box {
+    grid-area: task-form
+}
+
+.header__task-form {
+    width: 100%;
+    position: relative;
+}
+
+.task-form__input {
+    width: 100%;
+    border: none;
+    display: block;
+    color: #fff;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0.8em 3em 0.8em 0.8em;
+    border-radius: 5px;
+    font-size: 0.8em;
+    background-color: transparent;
+    transition: border-color 0.4s;
+    background:
+        linear-gradient(0deg, #00ce90 2px, transparent 1px), 
+        linear-gradient(0deg, #717070 1px, transparent 1px);
+
+    background-size: 0% 100%, 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background 0.4s;
+}
+
+.task-form__input::placeholder {
+    color: #717070;
+}
+
+.task-form__input:focus {
+    outline: none;
+    border-color: #fff;
+    background-size: 100% 100%, 100% 100%;
+}
+
+.task-form__submit-btn {
+    line-height: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    padding: 0 0.5em;
+    font-size: 1.3em;
+    color: #717070;
+}
+
+.header__login-btn-box {
+    justify-self: end;
+    grid-area: login-btn;
+}
+
+.header__login-btn {
+    padding: 0.6em 1em;
+}
+
+
+
+@media (max-width: 1200px) { 
+    .header__logo {
+        font-size: 1.8em;
+    }
+
+}
+
+@media (max-width: 720px) { 
+    .header {
+        font-size: 0.9em;
+    }
+
+    .header__inner {
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "logo login-btn"
+            "task-form task-form";
+        grid-gap: 0;
+        padding: 15px;
+    }
+
+    .header__task-form {
+        margin-top: 10px;
+    }
+}

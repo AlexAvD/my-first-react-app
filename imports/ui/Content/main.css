@@ -1,0 +1,127 @@
+.content {
+  width: 100%;
+  max-width: 800px;
+}
+
+.content__inner {
+  padding: 40px 15px;
+}
+
+.content__title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2em;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.1em;
+}
+
+.content__subtitle {
+  text-align: center;
+  font-weight: 800;
+}
+
+.content__subtitle-divider {
+  margin: 0 5px;
+  color: #00ce90;
+}
+
+.content__subtitle-total {
+  text-align: right;
+}
+
+.content__subtitle-checked {
+  text-align: left;
+}
+
+.content__subtitle-total,
+.content__subtitle-checked {
+  display: inline-block;
+  width: 120px;
+}
+
+.tasks-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tasks-info__text {
+  display: inline-block;
+  width: 3em;
+  text-align: center;
+}
+
+.tasks-info__task-toggle {
+  display: inline-block;
+}
+ 
+.task-toggle__body {
+  font-size: 0.8em;
+  width: 14em;
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid #000;
+  background-color: #fff;
+  margin: 2px;
+  box-shadow: 
+    0 2px 2px rgba(0, 0, 0, 0.2), 
+    0 4px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s;
+  z-index: 1;
+}
+
+.task-toggle__label {
+  flex: 1 1 100%;
+  text-align: center;
+  z-index: 2;
+  padding: 0.4em 1em;
+  transition: all 0.4s ease-out;
+  text-transform: uppercase;
+}
+
+.task-toggle__input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  z-index: 1;
+}
+
+.task-toggle__checkmark {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  height: 100%;
+  width: 50%;
+  background-color: #000;
+  transition: all 0.4s;
+}
+
+.task-toggle__label-checked {
+  color: #000;
+}
+
+
+.task-toggle__input:checked ~ .task-toggle__body > .task-toggle__label-all  {
+  color: #999;
+}
+
+.task-toggle__label-all,
+.task-toggle__input:checked ~ .task-toggle__body > .task-toggle__label-checked {
+  color: #fff;
+}
+
+.task-toggle__input:checked ~ .task-toggle__body > .task-toggle__checkmark {
+  transform: translatex(100%);
+  background-color: #00ce90;
+}
+
+.task-toggle__input:checked ~ .task-toggle__body {
+  /* border-color: #00ce90; */
+  background-color: #000
+}
